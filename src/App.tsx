@@ -6,6 +6,7 @@ import LibraryFilter from './components/LibraryFilter';
 import BookDetailPage from './pages/BookDetailPage';
 import HomePage from './pages/HomePage';
 import GroupsView from './components/GroupsView'; // Import GroupsView
+import ViewSeries from './components/ViewSeries'; // Import ViewSeries
 
 const App: React.FC = () => {
   const handleFilter = (query: string) => {
@@ -24,6 +25,7 @@ const App: React.FC = () => {
           <Route path="/book/:id" element={<BookDetailPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/groups" element={<GroupsView />} /> // Add route for GroupsView
+          <Route path="/series" element={<ViewSeries series={{ id: 1, title: 'Series Title', description: 'Series Description' }} />} /> // Add route for ViewSeries
         </Routes>
       </div>
     </Router>

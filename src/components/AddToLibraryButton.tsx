@@ -5,3 +5,5 @@ export function AddToLibraryButton() {
     <button>Add to Library</button>
   );
 }
+
+export default AddToLibraryButton;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function GeneralLayout() {
+export default function GeneralLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="general-layout">
       <header>

@@ -1,32 +1,18 @@
 // src/App.tsx
 import React from 'react';
-import GeneralLayout from './components/GeneralLayout';
-import AddToLibraryButton from './components/AddToLibraryButton';
-import BookDetails from './components/BookDetails';
-import BookCoverImage from './components/BookCoverImage';
-import BookAuthorInfo from './components/BookAuthorInfo';
-import GroupStructureInfo from './components/GroupStructureInfo';
-import ViewSeries from './components/ViewSeries';
-import ResponsiveContainer from './components/ResponsiveContainer';
-import LibraryDisplay from './components/LibraryDisplay'; // Import the new component
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 import BookDetailPage from './pages/BookDetailPage';
-import BookSearchPage from './pages/BookSearchPage';
 
-export default function App() {
+const App: React.FC = () => {
   return (
-    <GeneralLayout>
-      <h1>It works</h1>
-      <p>Scaffolded by Keikaku — replace this with the app.</p>
-      <AddToLibraryButton />
-      <BookDetails bookId="1" />
-      <BookCoverImage coverUrl="https://example.com/book-cover.jpg" />
-      <BookAuthorInfo author="John Doe" bio="A great writer." />
-      <GroupStructureInfo bookDetails={{}} />
-      <ViewSeries series={{ id: '1', title: 'Example Series', author: 'Jane Doe' }} />
-      <ResponsiveContainer>
-        <LibraryDisplay /> // Render the new component inside ResponsiveContainer
-      </ResponsiveContainer>
-      <BookSearchPage /> // Add this line
-    </GeneralLayout>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/book/:id" element={<BookDetailPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
+
+export default App;

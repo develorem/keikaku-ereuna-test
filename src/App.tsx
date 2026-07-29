@@ -7,6 +7,7 @@ import BookAuthorInfo from './components/BookAuthorInfo';
 import GroupStructureInfo from './components/GroupStructureInfo';
 import ViewSeries from './components/ViewSeries';
 import BookDetailPage from './pages/BookDetailPage'; // Import the new component
+import BookSearchPage from './pages/BookSearchPage'; // Add this line
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <GroupStructureInfo bookDetails={{}} />
       <ViewSeries series={{ id: '1', title: 'Example Series', author: 'Jane Doe' }} />
       <BookDetailPage /> // Render the new component
+      <BookSearchPage /> // Add this line
     </GeneralLayout>
   );
 }

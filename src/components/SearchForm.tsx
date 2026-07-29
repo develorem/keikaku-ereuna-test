@@ -21,3 +21,5 @@ export function SearchForm({ onSearch }) {
     </form>
   );
 }
+
+export default SearchForm;

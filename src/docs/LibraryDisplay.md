@@ -1,38 +1,11 @@
-# Library Display Feature
+# Library Display
 
-## Usage Instructions
+## Filter Options
 
-1. Import the `LibraryDisplay` component into your React application.
-2. Use the component in your JSX to display the library items.
+### Wanted Flag
 
-```jsx
-import { LibraryDisplay } from '../components/LibraryDisplay';
-
-function App() {
-  return (
-    <div>
-      <h1>Library</h1>
-      <LibraryDisplay />
-    </div>
-  );
-}
-
-export default App;
-```
-
-## Technical Details
-
-The `LibraryDisplay` component fetches library items from an API and displays them in a list. It uses React hooks for state management and side effects.
-
-### Dependencies
-
-- `axios`: For making HTTP requests to the API.
-- `react-query`: For handling data fetching and caching.
-
-### Installation
-
-To use this component, you need to install the required dependencies:
-
-```bash
-cnpm install axios react-query
-```
+The 'Wanted' flag allows you to filter items that are marked as wanted. To use this filter, follow these steps:
+1. Navigate to the Library page.
+2. Click on the 'Filter' button located at the top of the page.
+3. Check the 'Wanted' checkbox in the filter options.
+4. Click 'Apply' to see only items marked as wanted.

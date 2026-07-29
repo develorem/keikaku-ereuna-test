@@ -11,3 +11,5 @@ export function BookCoverImage({ coverUrl }: { coverUrl?: string }) {
   if (!coverUrl) return null;
   return <img src={coverUrl} alt="Book Cover" />;
 }
+
+export default BookCoverImage;

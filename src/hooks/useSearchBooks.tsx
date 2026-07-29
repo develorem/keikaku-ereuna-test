@@ -1,23 +1,15 @@
 // src/hooks/useSearchBooks.tsx
 import React, { useState, useEffect } from 'react';
-import { useFetchBooks } from '../hooks/useFetchBooks';
+import { useBooks } from '../hooks/useBooks';
 
-interface UseSearchBooksProps {
-  query: string;
-}
-
-export const useSearchBooks = ({ query }: UseSearchBooksProps) => {
+export default function useSearchBooks({ query = '' }) {
   const [books, setBooks] = useState([]);
-  const allBooks = useFetchBooks();
+  const allBooks = useBooks();
 
   useEffect(() => {
-    if (query === '') {
-      setBooks(allBooks);
-    } else {
-      const filteredBooks = allBooks.filter(book => book.title.toLowerCase().includes(query.toLowerCase()));
-      setBooks(filteredBooks);
-    }
+    const filteredBooks = allBooks.filter(book => book.title.toLowerCase().includes(query.toLowerCase()));
+    setBooks(filteredBooks);
   }, [query, allBooks]);
 
   return books;
-};
+}

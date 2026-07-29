@@ -7,11 +7,17 @@ interface LibraryFilterProps {
 
 const LibraryFilter: React.FC<LibraryFilterProps> = ({ onFilter }) => {
   const [query, setQuery] = useState('');
+  const [isWanted, setIsWanted] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newQuery = event.target.value;
     setQuery(newQuery);
     onFilter(newQuery);
+  };
+
+  const handleWantedChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIsWanted(event.target.checked);
+    onFilter(query);
   };
 
   return (
@@ -22,6 +28,14 @@ const LibraryFilter: React.FC<LibraryFilterProps> = ({ onFilter }) => {
         value={query}
         onChange={handleInputChange}
       />
+      <label>
+        <input
+type="checkbox"
+checked={isWanted}
+onChange={handleWantedChange}
+/>
+        Wanted
+      </label>
     </div>
   );
 };

@@ -1,25 +1,35 @@
 // src/components/SearchForm.tsx
-import React, { useState } from 'react';
+import React from 'react';
 
-export function SearchForm({ onSearch }) {
-  const [query, setQuery] = useState('');
+interface SearchFormProps {
+  onSearch: (query: string) => void;
+}
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
+  const [query, setQuery] = React.useState('');
+  const [showWanted, setShowWanted] = React.useState(false);
+
+  const handleSearch = () => {
     onSearch(query);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={(e) => { e.preventDefault(); handleSearch() }}>
       <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for a book..."
-      />
+type="text"
+value={query}
+onChange={(e) => setQuery(e.target.value)}
+placeholder="Search books..." />
       <button type="submit">Search</button>
+      <label>
+        <input
+type="checkbox"
+checked={showWanted}
+onChange={(e) => setShowWanted(e.target.checked)}
+/>&nbsp;Show Wanted Books
+      </label>
     </form>
   );
-}
+};
 
 export default SearchForm;

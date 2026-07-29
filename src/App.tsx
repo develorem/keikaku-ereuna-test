@@ -7,9 +7,10 @@ import BookCoverImage from './components/BookCoverImage';
 import BookAuthorInfo from './components/BookAuthorInfo';
 import GroupStructureInfo from './components/GroupStructureInfo';
 import ViewSeries from './components/ViewSeries';
-import ResponsiveContainer from './components/ResponsiveContainer'; // Import the new component
-import BookDetailPage from './pages/BookDetailPage'; // Import the new component
-import BookSearchPage from './pages/BookSearchPage'; // Add this line
+import ResponsiveContainer from './components/ResponsiveContainer';
+import LibraryDisplay from './components/LibraryDisplay'; // Import the new component
+import BookDetailPage from './pages/BookDetailPage';
+import BookSearchPage from './pages/BookSearchPage';
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
       <GroupStructureInfo bookDetails={{}} />
       <ViewSeries series={{ id: '1', title: 'Example Series', author: 'Jane Doe' }} />
       <ResponsiveContainer>
-        <BookDetailPage /> // Render the new component inside ResponsiveContainer
+        <LibraryDisplay /> // Render the new component inside ResponsiveContainer
       </ResponsiveContainer>
       <BookSearchPage /> // Add this line
     </GeneralLayout>

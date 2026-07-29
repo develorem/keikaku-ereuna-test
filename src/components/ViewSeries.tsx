@@ -1,16 +1,17 @@
+// src/components/ViewSeries.tsx
 import React from 'react';
 
 interface Series {
-  id: string;
+  id: number;
   title: string;
-  author: string;
+  description: string;
 }
 
 const ViewSeries: React.FC<{ series: Series }> = ({ series }) => {
   return (
-    <div className="series-container">
-      <h2>{series.title}</h2>
-      <p>Author: {series.author}</p>
+    <div className="view-series">
+      <h1>{series.title}</h1>
+      <p>{series.description}</p>
     </div>
   );
 };

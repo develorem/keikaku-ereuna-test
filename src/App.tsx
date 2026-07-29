@@ -3,6 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import LibraryFilter from './components/LibraryFilter';
+import BookDetailPage from './pages/BookDetailPage';
+import HomePage from './pages/HomePage';
 
 const App: React.FC = () => {
   const handleFilter = (query: string) => {
@@ -18,6 +20,8 @@ const App: React.FC = () => {
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/book/:id" element={<BookDetailPage />} />
+          <Route path="/home" element={<HomePage />} />
         </Routes>
       </div>
     </Router>

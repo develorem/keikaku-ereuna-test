@@ -1,6 +1,6 @@
 // src/components/AuthorView.tsx
 import React from 'react';
-import { useBooksByAuthor } from '../hooks/useBooksByAuthor';
+import useBooksByAuthor from '../hooks/useBooksByAuthor';
 
 interface AuthorViewProps {
   authorId: string;

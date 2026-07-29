@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "Bundled Page",
+  "tagline": "Unpacking...",
+  "colors": {
+    "primary": "#9184d9",
+    "secondary": "#2a1215",
+    "accent": "#ff8a80",
+    "bg": "#161826",
+    "surface": "#232532",
+    "text": "#e9e9ed",
+    "muted": "#999",
+    "border": "#5c2b2e"
+  },
+  "typography": {
+    "headingFont": "-apple-system, var(--font-heading)",
+    "bodyFont": "-apple-system, BlinkMacSystemFont, sans-serif"
+  },
+  "icon": {
+    "svg": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#9184d9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M82.5 81.25a30 30 0 1 1 0-42.5\" stroke-width=\"9\"></path><path d=\"M50 60h32.5\" stroke-width=\"9\"></path></g></svg>"
+  },
+  "logoText": "Bundled Page"
+}

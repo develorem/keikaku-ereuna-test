@@ -1,3 +1,4 @@
+// src/App.tsx
 import React from 'react';
 import GeneralLayout from './components/GeneralLayout';
 import AddToLibraryButton from './components/AddToLibraryButton';
@@ -6,6 +7,7 @@ import BookCoverImage from './components/BookCoverImage';
 import BookAuthorInfo from './components/BookAuthorInfo';
 import GroupStructureInfo from './components/GroupStructureInfo';
 import ViewSeries from './components/ViewSeries';
+import ResponsiveContainer from './components/ResponsiveContainer'; // Import the new component
 import BookDetailPage from './pages/BookDetailPage'; // Import the new component
 import BookSearchPage from './pages/BookSearchPage'; // Add this line
 
@@ -20,7 +22,9 @@ export default function App() {
       <BookAuthorInfo author="John Doe" bio="A great writer." />
       <GroupStructureInfo bookDetails={{}} />
       <ViewSeries series={{ id: '1', title: 'Example Series', author: 'Jane Doe' }} />
-      <BookDetailPage /> // Render the new component
+      <ResponsiveContainer>
+        <BookDetailPage /> // Render the new component inside ResponsiveContainer
+      </ResponsiveContainer>
       <BookSearchPage /> // Add this line
     </GeneralLayout>
   );

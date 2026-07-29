@@ -2,10 +2,11 @@
 import React from 'react';
 import GeneralLayout from '../components/GeneralLayout';
 import SearchForm from '../components/SearchForm';
+import AddToLibraryButton from '../components/AddToLibraryButton';
 import { useSearchBooks } from '../hooks/useSearchBooks';
 
 export default function BookSearchPage() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = React.useState('');
   const books = useSearchBooks(query);
 
   return (
@@ -17,6 +18,7 @@ export default function BookSearchPage() {
           <li key={book.id}>{book.title} by {book.author}</li>
         ))}
       </ul>
+      <AddToLibraryButton /> {/* Add the new button */}
     </GeneralLayout>
   );
 }

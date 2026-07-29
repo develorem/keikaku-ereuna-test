@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AddToLibraryButton() {
+export function AddToLibraryButton() {
   return (
     <button>Add to Library</button>
   );

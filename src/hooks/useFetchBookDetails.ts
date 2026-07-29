@@ -7,12 +7,13 @@ export function useFetchBookDetails(bookId: string) {
   useEffect(() => {
     async function fetchBook() {
       try {
-        const response = await fetch(`https://api.example.com/books/${bookId}`);
+        const response = await fetch('/data/books.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setBookDetails(data);
+        const book = data.find(book => book.id === bookId);
+        setBookDetails(book);
       } catch (err) {
         setError(err);
       }

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LibraryFilter from './components/LibraryFilter';
 import BookSearchPage from './pages/BookSearchPage';
 import WantedBooksGroup from './components/WantedBooksGroup';
+import FeedbackForm from './components/FeedbackForm';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<LibraryFilter />} />
         <Route path="/search" element={<BookSearchPage />} />
         <Route path="/wanted-books" element={<WantedBooksGroup />} />
+        <Route path="/feedback" element={<FeedbackForm />} />
       </Routes>
     </Router>
   );
